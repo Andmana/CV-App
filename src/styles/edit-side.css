@@ -95,14 +95,15 @@
 }
 
 .input-group {
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .input-group label {
-    margin-left: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
