@@ -1,0 +1,35 @@
+.app {
+    min-height: 100vh;
+    color: var(--text-main);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.top-nav,
+.footer {
+    background-color: var(--bg-main);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text-white);
+}
+
+.top-nav {
+    height: 60px;
+}
+
+.footer {
+    height: 45px;
+}
+
+.content-container {
+    background-color: var(--bg-light);
+
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}

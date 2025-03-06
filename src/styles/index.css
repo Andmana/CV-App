@@ -74,41 +74,34 @@ h6 {
     --text-blue: #005377;
 
     --bg-main: #27445d;
-    --bg-light: #f1f1f1;
+    --bg-light: #f2f2f2;
     --bg-white: #fff;
 }
 
-.app {
-    min-height: 100vh;
-    min-width: 100vw;
-
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-
-    color: var(--text-main);
+/* Reset default input styles */
+input,
+textarea,
+select,
+button {
+    all: unset;
+    /* Optional: You can add your own custom styles afterward */
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
 }
 
-.top-nav,
-.footer {
-    background-color: var(--bg-main);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: var(--text-white);
+button {
+    cursor: pointer;
 }
 
-.top-nav {
-    height: 60px;
-}
-
-.footer {
-    height: 45px;
-}
-
-.container {
-    flex: 1;
-    background-color: var(--bg-light);
+/* Reset UL and LI */
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
