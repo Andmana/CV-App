@@ -1,0 +1,114 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/***************/
+/*             */
+/*   MY CODE   */
+/*             */
+/***************/
+
+:root {
+    --text-main: #222222;
+    --text-secondary: #999999;
+    --text-white: #fff;
+    --text-blue: #005377;
+
+    --bg-main: #27445d;
+    --bg-light: #f1f1f1;
+    --bg-white: #fff;
+}
+
+.app {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    color: var(--text-main);
+}
+
+.top-nav,
+.footer {
+    background-color: var(--bg-main);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text-white);
+}
+
+.top-nav {
+    height: 60px;
+}
+
+.footer {
+    height: 45px;
+}
+
+.container {
+    flex: 1;
+    background-color: var(--bg-light);
+}
