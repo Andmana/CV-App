@@ -1,0 +1,35 @@
+.resume-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.resume {
+    width: 900px;
+    height: 1273px;
+    background-color: var(--bg-white);
+}
+
+.resume-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    color: var(--text-white);
+    background-color: var(--bg-main);
+}
+
+.resume-name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
