@@ -14,3 +14,13 @@
     height: 1273px;
     background-color: var(--bg-white);
 }
+
+.resume-section {
+    margin: 1rem 3rem;
+}
+
+.resume-section-header {
+    margin-bottom: 0.5rem;
+    background-color: var(--bg-light);
+    text-align: center;
+}

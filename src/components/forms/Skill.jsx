@@ -1,7 +1,7 @@
 import templateData from "../../template";
 import InputGroup from "./inputGroup";
 
-const skillsTemp = templateData.skills;
+const skillsTemp = templateData.section.skills;
 const Skill = () => {
     function emptyFunc() {}
     return (

@@ -1,0 +1,15 @@
+.resume-skill-item {
+    display: flex;
+    gap: 1ch;
+}
+
+.resume-skill-item > p:first-child {
+    min-width: 130px;
+    flex-shrink: 200px;
+    width: fit-content;
+    font-weight: 600;
+}
+
+.resume-skill-item span {
+    float: right;
+}
