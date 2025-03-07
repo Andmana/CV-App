@@ -1,0 +1,25 @@
+.input-group {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    padding: 5px 1rem 3px;
+    border-radius: 10px;
+    background-color: var(--bg-light);
+    border: 2px solid transparent;
+}
+
+.input-group input:focus,
+.input-group input:active {
+    background-color: var(--bg-white);
+    border-color: skyblue;
+}
