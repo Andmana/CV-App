@@ -4,6 +4,11 @@
     justify-content: center;
 }
 
+.resume-border {
+    padding: 3px;
+    border: 2px solid var(--bg-main);
+}
+
 .resume {
     width: 900px;
     height: 1273px;
@@ -17,19 +22,19 @@
     align-items: center;
 
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 
     color: var(--text-white);
     background-color: var(--bg-main);
 }
 
 .resume-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1rem;
 }
