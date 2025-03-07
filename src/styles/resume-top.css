@@ -27,18 +27,3 @@
     align-items: center;
     gap: 5px;
 }
-
-.icon-email {
-    background-image: url("/email-icon.svg");
-    background-size: cover;
-}
-
-.icon-phone {
-    background-image: url("/phone-icon.svg");
-    background-size: cover;
-}
-
-.icon-address {
-    background-image: url("/address-icon.svg");
-    background-size: cover;
-}

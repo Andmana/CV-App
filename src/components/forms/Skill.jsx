@@ -17,7 +17,10 @@ const Skill = () => {
                     })}
                 </div>
                 <div className="edit-section-add">
-                    <button>Add</button>
+                    <button className="bg-white">
+                        <span className="icon icon-add"></span>{" "}
+                        <span>Skill</span>
+                    </button>
                 </div>
 
                 <div className="section-form">
@@ -40,13 +43,13 @@ const Skill = () => {
 
                     <div className="section-form-action">
                         <div className="flex-1">
-                            <button className="delete">Delete</button>
+                            <button className="bg-danger">Delete</button>
                         </div>
                         <div>
-                            <button className="cancel">Cancel</button>
+                            <button className="bg-white">Cancel</button>
                         </div>
                         <div>
-                            <button className="save">Save</button>
+                            <button className="bg-primary">Save</button>
                         </div>
                     </div>
                 </div>
