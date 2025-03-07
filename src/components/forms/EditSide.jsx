@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "../../styles/edit-side.css";
 import PersonalDetail from "./PersonalDetail";
-const EditSide = () => {
+
+const EditSide = ({ personalInfo, onPersonalInputChange }) => {
     const [activeSection, setActiveSection] = useState(0);
 
     const handleSectionEvent = (id) => {
@@ -37,7 +38,12 @@ const EditSide = () => {
                 <div className="active-edit-section">
                     <h2>{EditSection[activeSection]?.name}</h2>
                 </div>
-                {EditSection[activeSection]?.id === 0 && <PersonalDetail />}
+                {EditSection[activeSection]?.id === 0 && (
+                    <PersonalDetail
+                        personalInfo={personalInfo}
+                        onInputChange={onPersonalInputChange}
+                    />
+                )}
             </div>
         </>
     );

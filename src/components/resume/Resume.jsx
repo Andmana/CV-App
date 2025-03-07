@@ -1,12 +1,12 @@
 import "../../styles/resume.css";
 import ResumeTop from "./ResumeTop";
 
-const Resume = () => {
+const Resume = ({ personalInfo }) => {
     return (
         <>
             <div className="resume-border">
                 <div className="resume">
-                    <ResumeTop />
+                    <ResumeTop personalInfo={personalInfo} />
                 </div>
             </div>
         </>
