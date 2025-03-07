@@ -14,27 +14,3 @@
     height: 1273px;
     background-color: var(--bg-white);
 }
-
-.resume-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-
-    color: var(--text-white);
-    background-color: var(--bg-main);
-}
-
-.resume-name {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}

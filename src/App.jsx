@@ -2,14 +2,11 @@ import "./styles/app.css";
 import EditSide from "./components/forms/EditSide";
 import Resume from "./components/resume/Resume";
 import { useState } from "react";
+import templateData from "./template";
 
 function App() {
-    const [personalInfo, setPersonalInfo] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-    });
+    const initData = { ...templateData };
+    const [personalInfo, setPersonalInfo] = useState(initData.personalInfo);
 
     // Function to update personal info form
     const handlePersonalInputChange = (event) => {
