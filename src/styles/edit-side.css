@@ -71,8 +71,9 @@
     transition: transform 0.4s ease-out;
 }
 
-.active-edit-section h2 {
+.active-edit-section {
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .edit-section-option ul {
@@ -94,28 +95,53 @@
     transform: translateY(-5px);
 }
 
-.input-group {
-    font-size: 0.9rem;
+.section-list {
+    padding: 3px 0;
+    background-color: var(--bg-light);
     display: flex;
     flex-direction: column;
-
+    gap: 3px;
     margin-bottom: 1rem;
 }
 
-.input-group label {
-    margin-bottom: 0.5rem;
+.section-list-item {
+    padding: 0.5rem;
+    background-color: var(--bg-white);
     font-weight: 600;
 }
 
-.input-group input {
-    padding: 5px 1rem 3px;
-    border-radius: 10px;
-    background-color: var(--bg-light);
-    border: 2px solid transparent;
+.edit-section-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.input-group input:focus,
-.input-group input:active {
-    background-color: var(--bg-white);
-    border-color: skyblue;
+.edit-section-add button {
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: var(--text-white);
+    padding: 0.3rem 2rem;
+    background-color: var(--bg-main);
+    transition: transform 0.4s ease-out;
+}
+
+.edit-section-add button:hover {
+    transform: scale(1.1);
+}
+
+.section-form-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-form-action button {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-white);
+    width: 100px;
+    padding: 5px 0;
+    border-radius: 5px;
 }

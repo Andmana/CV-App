@@ -20,6 +20,7 @@ const InputGroup = ({
                     value={propValue}
                     onChange={onChangeFunction}
                     data-id={dataId}
+                    rows={3}
                 />
             ) : (
                 <input

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../../styles/edit-side.css";
 import PersonalDetail from "./PersonalDetail";
+import Skill from "./Skill";
 
 const EditSide = ({ personalInfo, onPersonalInputChange }) => {
     const [activeSection, setActiveSection] = useState(0);
@@ -44,6 +45,7 @@ const EditSide = ({ personalInfo, onPersonalInputChange }) => {
                         onInputChange={onPersonalInputChange}
                     />
                 )}
+                {EditSection[activeSection]?.id === 3 && <Skill />}
             </div>
         </>
     );

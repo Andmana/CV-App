@@ -11,7 +11,8 @@
     font-weight: 600;
 }
 
-.input-group input {
+.input-group input,
+.input-group textarea {
     padding: 5px 1rem 3px;
     border-radius: 10px;
     background-color: var(--bg-light);
@@ -19,7 +20,9 @@
 }
 
 .input-group input:focus,
-.input-group input:active {
+.input-group input:active,
+.input-group textarea:focus,
+.input-group textarea:active {
     background-color: var(--bg-white);
     border-color: skyblue;
 }
