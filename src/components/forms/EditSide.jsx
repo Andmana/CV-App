@@ -1,15 +1,13 @@
-import { useState } from "react";
 import "../../styles/edit-side.css";
 import PersonalDetail from "./PersonalDetail";
 import Skill from "./Skill";
 
-const EditSide = ({ personalInfo, onPersonalInputChange }) => {
-    const [activeSection, setActiveSection] = useState(0);
-
-    const handleSectionEvent = (id) => {
-        setActiveSection(id);
-    };
-
+const EditSide = ({
+    activeSection,
+    handleSectionEvent,
+    personalInfo,
+    onPersonalInputChange,
+}) => {
     return (
         <>
             <div className="template-loader">
@@ -20,20 +18,20 @@ const EditSide = ({ personalInfo, onPersonalInputChange }) => {
             <div className="edit-section">
                 <div className="edit-section-option">
                     <ul>
-                        {EditSection.map((section) => {
-                            if (section.id === activeSection) return null; // Skip active section
-                            return (
-                                <li key={section.id}>
-                                    <button
-                                        onClick={() =>
-                                            handleSectionEvent(section.id)
-                                        }
-                                    >
-                                        {section.name}
-                                    </button>
-                                </li>
-                            );
-                        })}
+                        {EditSection.map(
+                            (section) =>
+                                section.id != activeSection && (
+                                    <li key={section.id}>
+                                        <button
+                                            onClick={() => {
+                                                handleSectionEvent(section.id);
+                                            }}
+                                        >
+                                            {section.name}
+                                        </button>
+                                    </li>
+                                )
+                        )}
                     </ul>
                 </div>
                 <div className="active-edit-section">

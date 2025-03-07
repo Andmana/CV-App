@@ -6,7 +6,12 @@ import templateData from "./template";
 
 function App() {
     const initData = { ...templateData };
+    const [activeSection, setActiveSection] = useState(0);
     const [personalInfo, setPersonalInfo] = useState(initData.personalInfo);
+
+    const handleSectionEvent = (id) => {
+        setActiveSection(id);
+    };
 
     // Function to update personal info form
     const handlePersonalInputChange = (event) => {
@@ -27,6 +32,8 @@ function App() {
                 <main className="content-container">
                     <aside className="edit-side">
                         <EditSide
+                            activeSection={activeSection}
+                            handleSectionEvent={handleSectionEvent}
                             personalInfo={personalInfo}
                             onPersonalInputChange={handlePersonalInputChange}
                         />
