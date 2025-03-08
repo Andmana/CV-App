@@ -26,3 +26,9 @@
     background-color: var(--bg-white);
     border-color: skyblue;
 }
+
+.input-group-small {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
