@@ -72,6 +72,26 @@ function App() {
             if (id === null) {
                 // Restore sectionData from sectionBackup
                 setSectionData({ ...sectionBackup });
+            } else {
+                const action = event.target.dataset.action;
+                if (action === "delete") {
+                    console.log("goes here", open, id);
+
+                    // Create a copy of the sectionData object
+                    const updatedSectionData = { ...sectionData };
+
+                    // Get the section array and ensure it exists
+                    let sectionArr = updatedSectionData[activeSection.name];
+
+                    // Filter out the item with the specific id
+                    sectionArr = sectionArr.filter((item) => item.id !== id);
+
+                    // Update the section data with the modified array
+                    updatedSectionData[activeSection.name] = sectionArr;
+
+                    // Update the state with the new data
+                    setSectionData(updatedSectionData);
+                }
             }
         }
 

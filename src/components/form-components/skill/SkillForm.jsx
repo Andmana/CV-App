@@ -27,7 +27,15 @@ const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
 
                 <div className="section-form-action">
                     <div className="flex-1">
-                        <button className="bg-danger">Delete</button>
+                        <button
+                            onClick={handleSectionForm}
+                            data-open="false"
+                            data-id={data.id}
+                            data-action="delete"
+                            className="bg-danger"
+                        >
+                            Delete
+                        </button>
                     </div>
                     <div>
                         <button
@@ -43,6 +51,7 @@ const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
                         <button
                             onClick={handleSectionForm}
                             data-open="false"
+                            data-action="save"
                             data-id={data.id}
                             className="bg-primary"
                         >

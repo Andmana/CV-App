@@ -26,25 +26,31 @@ const EditSide = ({
                 <button className="load-template">Load Template</button>
             </div>
             <div className="edit-section-container">
-                <div className="edit-section-option">
-                    <ul>
-                        {EditSection.map((section) => {
-                            return (
-                                section.id != activeSection.id && (
-                                    <li key={section.id}>
-                                        <button
-                                            onClick={handleActiveSection}
-                                            data-id={section.id}
-                                            data-name={section.name}
-                                        >
-                                            {section.name}
-                                        </button>
-                                    </li>
-                                )
-                            );
-                        })}
-                    </ul>
-                </div>
+                {!sectionForm.open && (
+                    <>
+                        <div className="edit-section-option">
+                            <ul>
+                                {EditSection.map((section) => {
+                                    return (
+                                        section.id != activeSection.id && (
+                                            <li key={section.id}>
+                                                <button
+                                                    onClick={
+                                                        handleActiveSection
+                                                    }
+                                                    data-id={section.id}
+                                                    data-name={section.name}
+                                                >
+                                                    {section.name}
+                                                </button>
+                                            </li>
+                                        )
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                    </>
+                )}
                 <div className="edit-section">
                     {activeSection.id === 0 && (
                         <PersonalDetailEdit
