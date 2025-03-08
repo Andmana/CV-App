@@ -15,12 +15,14 @@ const SkillEdit = ({
     return (
         <>
             <h1 className="edit-section-header">Skills</h1>
+
             {!sectionForm.open && (
                 <SkillList
-                    skills={sectionData}
+                    data={sectionData}
                     handleSectionForm={handleSectionForm}
                 />
             )}
+
             {sectionForm.open && (
                 <SKillForm
                     data={data}

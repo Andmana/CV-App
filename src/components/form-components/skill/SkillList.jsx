@@ -1,17 +1,17 @@
-const SkillList = ({ skills, handleSectionForm }) => {
+const SkillList = ({ data, handleSectionForm }) => {
     return (
         <>
             <div className="section-list">
-                {skills.map((skill) => {
+                {data.map((item) => {
                     return (
                         <li
-                            key={skill.id}
+                            key={item.id}
                             className="section-list-item"
                             data-open="true"
-                            data-id={skill.id}
+                            data-id={item.id}
                             onClick={handleSectionForm}
                         >
-                            {skill.name}
+                            {item.name}
                         </li>
                     );
                 })}
