@@ -4,7 +4,7 @@
 }
 
 .resume-skill-item > p:first-child {
-    min-width: 130px;
+    min-width: 140px;
     flex-shrink: 200px;
     width: fit-content;
     font-weight: 600;

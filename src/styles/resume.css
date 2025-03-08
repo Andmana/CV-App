@@ -13,6 +13,7 @@
     width: 900px;
     height: 1273px;
     background-color: var(--bg-white);
+    font-size: 1.1rem;
 }
 
 .resume-section {
@@ -23,6 +24,34 @@
     margin-bottom: 0.5rem;
     border-bottom: 3px solid black;
     margin-bottom: 1rem;
-    /* background-color: var(--bg-light); */
-    /* text-align: center; */
+}
+
+.item-top {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.item-top .icon {
+    filter: invert(100%);
+}
+
+.st {
+    font-size: 1em;
+    font-weight: 600;
+}
+.nd {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.rd {
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+}
+.th {
+    flex: 1;
+    text-align: end;
+    font-weight: 600;
+    font-size: 0.8;
 }

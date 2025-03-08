@@ -13,20 +13,22 @@ const ResumeEducation = ({ educations }) => {
                     return (
                         <li key={education.id}>
                             <div className="resume-education-item">
-                                <div className="st">{education.school}</div>
-                                <span>-</span>
-                                <div className="nd">{education.degree}</div>
+                                <div className="item-top">
+                                    <div className="st">{education.school}</div>
+                                    <span>-</span>
+                                    <div className="nd">{education.degree}</div>
 
-                                <div className="rd">
-                                    <span className="icon icon-address"></span>
-                                    {education.location}
-                                </div>
-                                <div className="th">
-                                    {education.end != "" &&
-                                    education.start != ""
-                                        ? education.start + " - "
-                                        : education.start}{" "}
-                                    {education.end}
+                                    <div className="rd">
+                                        <span className="icon icon-address"></span>
+                                        {education.location}
+                                    </div>
+                                    <div className="th">
+                                        {education.end != "" &&
+                                        education.start != ""
+                                            ? education.start + " - "
+                                            : education.start}{" "}
+                                        {education.end}
+                                    </div>
                                 </div>
                             </div>
                         </li>
