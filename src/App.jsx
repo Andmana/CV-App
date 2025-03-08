@@ -1,25 +1,42 @@
-import "./styles/app.css";
-import EditSide from "./components/forms/EditSide";
-import Resume from "./components/resume/Resume";
 import { useState } from "react";
+import EditSide from "./components/form-components/EditSide";
 import templateData from "./template";
+import "./styles/app.css";
 
 function App() {
-    const initData = { ...templateData };
-    const [activeSection, setActiveSection] = useState(0);
-    const [personalInfo, setPersonalInfo] = useState(initData.personalInfo);
+    const initialSectionData = templateData;
+    const [presonalData, setPersonalData] = useState({
+        ...initialSectionData["Personal Details"],
+    });
+    const [sectionData, setSectionData] = useState({
+        ...initialSectionData.section,
+    });
+    const [activeSection, setActiveSection] = useState({
+        id: 0,
+        name: "Personal Details",
+    });
+    const [isFormOpen, setFormOpen] = useState(false);
 
-    const handleSectionEvent = (id) => {
-        setActiveSection(id);
+    const handleActiveSection = (event) => {
+        const { id, name } = event.target.dataset;
+        setActiveSection({ id: parseInt(id), name });
     };
 
-    // Function to update personal info form
-    const handlePersonalInputChange = (event) => {
+    const handlePersonalDataChange = (event) => {
         const { name, value } = event.target;
-        setPersonalInfo({
-            ...personalInfo,
+        setPersonalData({
+            ...presonalData,
             [name]: value,
         });
+    };
+
+    // * Need to update
+    const handleSectionDataChange = (event) => {
+        setSectionData(event);
+    };
+
+    const handleFormOpen = () => {
+        setFormOpen(!isFormOpen);
     };
 
     return (
@@ -33,15 +50,23 @@ function App() {
                     <aside className="edit-side">
                         <EditSide
                             activeSection={activeSection}
-                            handleSectionEvent={handleSectionEvent}
-                            personalInfo={personalInfo}
-                            onPersonalInputChange={handlePersonalInputChange}
+                            handleActiveSection={handleActiveSection}
+                            sectionData={
+                                activeSection.id === 0
+                                    ? presonalData
+                                    : sectionData
+                            }
+                            handleSectionDataChange={
+                                activeSection.id === 0
+                                    ? handlePersonalDataChange
+                                    : handleSectionDataChange
+                            }
+                            isFormOpen={isFormOpen}
+                            handleFormOpen={handleFormOpen}
                         />
                     </aside>
 
-                    <section className="resume-container">
-                        <Resume personalInfo={personalInfo} />
-                    </section>
+                    <section className="resume-container"></section>
                 </main>
 
                 <footer className="footer"></footer>

@@ -75,6 +75,12 @@
     transform: translateY(-5px);
 }
 
+.edit-section-header {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
 .section-list {
     padding: 3px 0;
     background-color: var(--bg-light);

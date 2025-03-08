@@ -1,5 +1,5 @@
 const templateData = {
-    personalInfo: {
+    "Personal Details": {
         name: "Jahn Doe",
         email: "foo@bar.com",
         phone: "+62 XXX 0101 2020",
@@ -7,7 +7,7 @@ const templateData = {
     },
 
     section: {
-        skills: [
+        Skills: [
             {
                 id: crypto.randomUUID(),
                 name: "Skill",
@@ -33,7 +33,7 @@ const templateData = {
             },
         ],
 
-        educations: [
+        Educations: [
             {
                 id: crypto.randomUUID(),
                 degree: "your degree",
@@ -59,7 +59,7 @@ const templateData = {
                 location: "Living Room, near snacks",
             },
         ],
-        experiences: [
+        Experiences: [
             {
                 id: crypto.randomUUID(),
                 company: "company name",
