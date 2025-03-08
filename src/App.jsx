@@ -32,7 +32,8 @@ function App() {
 
     // * Need to update
     const handleSectionDataChange = (event) => {
-        setSectionData(event);
+        console.log("event.target.value", event.target.value);
+        // setSectionData(event);
     };
 
     const handleFormOpen = () => {
