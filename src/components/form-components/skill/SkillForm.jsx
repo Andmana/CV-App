@@ -1,10 +1,6 @@
 import InputGroup from "../InputGroup";
 
-const SKillForm = ({
-    sectiondData,
-    handleSectionDataChange,
-    handleSectionForm,
-}) => {
+const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
     function emptyFunc(e) {
         e.target.value = e.target.value + "AA";
     }
@@ -14,7 +10,7 @@ const SKillForm = ({
                 <InputGroup
                     label="name"
                     propName="name"
-                    propValue=""
+                    propValue={data.name}
                     onChangeFunction={handleSectionDataChange}
                     placeholder="Enter skill"
                 />
@@ -22,7 +18,7 @@ const SKillForm = ({
                 <InputGroup
                     label="descriotion"
                     propName="description"
-                    propValue=""
+                    propValue={data.description}
                     onChangeFunction={handleSectionDataChange}
                     placeholder="Enter description"
                     type="textarea"

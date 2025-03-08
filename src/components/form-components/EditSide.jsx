@@ -16,8 +16,8 @@ const EditSide = ({
     handleActiveSection,
     sectionData,
     handleSectionDataChange,
-    isFormOpen,
-    handleFormOpen,
+    sectionForm,
+    handleSectionForm,
 }) => {
     return (
         <>
@@ -56,24 +56,24 @@ const EditSide = ({
                         <ExperienceEdit
                             sectionData={sectionData.Experiences}
                             handleSectionDataChange={handleSectionDataChange}
-                            isFormOpen={isFormOpen}
-                            handleFormOpen={handleFormOpen}
+                            sectionForm={sectionForm}
+                            handleSectionForm={handleSectionForm}
                         />
                     )}
                     {activeSection.id === 2 && (
                         <EducationEdit
                             sectionData={sectionData.Educations}
                             handleSectionDataChange={handleSectionDataChange}
-                            isFormOpen={isFormOpen}
-                            handleFormOpen={handleFormOpen}
+                            sectionForm={sectionForm}
+                            handleSectionForm={handleSectionForm}
                         />
                     )}
                     {activeSection.id === 3 && (
                         <SkillEdit
                             sectionData={sectionData.Skills}
                             handleSectionDataChange={handleSectionDataChange}
-                            isFormOpen={isFormOpen}
-                            handleFormOpen={handleFormOpen}
+                            sectionForm={sectionForm}
+                            handleSectionForm={handleSectionForm}
                         />
                     )}
                 </div>

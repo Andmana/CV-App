@@ -92,6 +92,10 @@ button {
     outline: none;
 }
 
+button > * {
+    pointer-events: none;
+}
+
 ul,
 ol {
     list-style: none;

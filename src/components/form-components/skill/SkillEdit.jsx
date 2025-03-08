@@ -7,6 +7,11 @@ const SkillEdit = ({
     sectionForm,
     handleSectionForm,
 }) => {
+    let data;
+    if (sectionForm.open) {
+        data = sectionData.find((item) => item.id == sectionForm.id);
+    }
+
     return (
         <>
             <h1 className="edit-section-header">Skills</h1>
@@ -18,7 +23,7 @@ const SkillEdit = ({
             )}
             {sectionForm.open && (
                 <SKillForm
-                    sectionData={sectionData}
+                    data={data}
                     handleSectionDataChange={handleSectionDataChange}
                     handleSectionForm={handleSectionForm}
                 />
