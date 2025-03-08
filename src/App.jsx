@@ -7,12 +7,11 @@ import ResumeView from "./components/resume-components/ResumeView";
 
 function App() {
     // Initialize state
-    const initialSectionData = templateData;
     const [personalData, setPersonalData] = useState({
-        ...initialSectionData["Personal Details"],
+        ...templateData["Personal Details"],
     });
     const [sectionData, setSectionData] = useState({
-        ...initialSectionData.section,
+        ...templateData.section,
     });
     const [sectionBackup, setSectionBackup] = useState({ ...sectionData });
     const [activeSection, setActiveSection] = useState({
@@ -24,16 +23,19 @@ function App() {
     const handleActiveSection = (event) => {
         const { id, name } = event.target.dataset;
         setActiveSection({ id: parseInt(id), name });
-        setSectionForm({ open: false, id: null });
-        setSectionData({ ...sectionBackup }); // Restore backup
+
+        if (sectionForm.open) {
+            setSectionForm({ open: false, id: null });
+            setSectionData({ ...sectionBackup }); // Restore backup
+        }
     };
 
     const handleResetData = (event) => {
         const isLoadTemplate = event.target.dataset.load === "true";
         console.log("goes here", isLoadTemplate);
         if (isLoadTemplate) {
-            setPersonalData({ ...initialSectionData["Personal Details"] });
-            setSectionData({ ...initialSectionData.section });
+            setPersonalData({ ...templateData["Personal Details"] });
+            setSectionData({ ...templateData.section });
         } else {
             setPersonalData({ ...emptyData["Personal Details"] });
             setSectionData({ ...emptyData.section });
