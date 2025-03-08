@@ -1,4 +1,4 @@
-const SkillList = ({ skills, handleFormOpen }) => {
+const SkillList = ({ skills, handleSectionForm }) => {
     return (
         <>
             <div className="section-list">
@@ -12,7 +12,12 @@ const SkillList = ({ skills, handleFormOpen }) => {
             </div>
 
             <div className="edit-section-add">
-                <button className="bg-white" onClick={handleFormOpen}>
+                <button
+                    className="bg-white"
+                    data-open="true"
+                    data-id="null"
+                    onClick={handleSectionForm}
+                >
                     <span className="icon icon-add"></span> <span>Skill</span>
                 </button>
             </div>

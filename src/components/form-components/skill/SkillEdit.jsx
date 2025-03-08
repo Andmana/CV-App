@@ -4,23 +4,23 @@ import SkillList from "./SkillList";
 const SkillEdit = ({
     sectionData,
     handleSectionDataChange,
-    isFormOpen,
-    handleFormOpen,
+    sectionForm,
+    handleSectionForm,
 }) => {
     return (
         <>
             <h1 className="edit-section-header">Skills</h1>
-            {isFormOpen && (
+            {!sectionForm.open && (
                 <SkillList
                     skills={sectionData}
-                    handleFormOpen={handleFormOpen}
+                    handleSectionForm={handleSectionForm}
                 />
             )}
-            {!isFormOpen && (
+            {sectionForm.open && (
                 <SKillForm
                     sectionData={sectionData}
                     handleSectionDataChange={handleSectionDataChange}
-                    handleFormOpen={handleFormOpen}
+                    handleSectionForm={handleSectionForm}
                 />
             )}
         </>

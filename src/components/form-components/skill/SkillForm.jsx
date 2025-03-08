@@ -3,7 +3,7 @@ import InputGroup from "../InputGroup";
 const SKillForm = ({
     sectiondData,
     handleSectionDataChange,
-    handleFormOpen,
+    handleSectionForm,
 }) => {
     function emptyFunc(e) {
         e.target.value = e.target.value + "AA";
@@ -33,7 +33,12 @@ const SKillForm = ({
                         <button className="bg-danger">Delete</button>
                     </div>
                     <div>
-                        <button onClick={handleFormOpen} className="bg-white">
+                        <button
+                            onClick={handleSectionForm}
+                            data-open="false"
+                            data-id="null"
+                            className="bg-white"
+                        >
                             Cancel
                         </button>
                     </div>
