@@ -1,9 +1,6 @@
 import InputGroup from "../InputGroup";
 
 const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
-    function emptyFunc(e) {
-        e.target.value = e.target.value + "AA";
-    }
     return (
         <>
             <div className="section-form">
@@ -13,6 +10,8 @@ const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
                     propValue={data.name}
                     onChangeFunction={handleSectionDataChange}
                     placeholder="Enter skill"
+                    dataId={data.id}
+                    dataSection="Skills"
                 />
 
                 <InputGroup
@@ -22,6 +21,8 @@ const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
                     onChangeFunction={handleSectionDataChange}
                     placeholder="Enter description"
                     type="textarea"
+                    dataId={data.id}
+                    dataSection="Skills"
                 />
 
                 <div className="section-form-action">

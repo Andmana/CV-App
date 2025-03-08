@@ -8,6 +8,7 @@ const InputGroup = ({
     placeHolder,
     type = "",
     dataId = null,
+    dataSection = null,
 }) => {
     return (
         <div className="input-group">
@@ -20,6 +21,7 @@ const InputGroup = ({
                     value={propValue}
                     onChange={onChangeFunction}
                     data-id={dataId}
+                    data-section={dataSection}
                     rows={3}
                 />
             ) : (
@@ -31,6 +33,7 @@ const InputGroup = ({
                     value={propValue}
                     onChange={onChangeFunction}
                     data-id={dataId}
+                    data-section={dataSection}
                 />
             )}
         </div>
