@@ -1,6 +1,7 @@
 import ResumeTop from "./ResumeTop";
 import "../../styles/resume.css";
 import ResumeSkill from "./ResumeSkill";
+import ResumeEducation from "./ResumeEducation";
 
 const ResumeView = ({ personalData, sectionData }) => {
     return (
@@ -8,6 +9,7 @@ const ResumeView = ({ personalData, sectionData }) => {
             <div className="resume">
                 <ResumeTop personalData={personalData} />
                 <ResumeSkill skills={sectionData.Skills} />
+                <ResumeEducation educations={sectionData.Educations} />
             </div>
         </div>
     );

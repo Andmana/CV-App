@@ -1,0 +1,31 @@
+.resume-education-item {
+    display: flex;
+    align-items: center;
+    gap: 1ch;
+}
+
+.st {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.nd {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.rd {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.th {
+    flex: 1;
+    text-align: end;
+    font-weight: 600;
+    font-size: 0.8;
+}
+
+.resume-education-item .icon {
+    filter: invert(100%);
+}
