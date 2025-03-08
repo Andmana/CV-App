@@ -99,4 +99,17 @@ const templateData = {
     },
 };
 
+export const emptyData = {
+    "Personal Details": {
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+    },
+    section: {
+        Skills: [],
+        Educations: [],
+        Experiences: [],
+    },
+};
 export default templateData;

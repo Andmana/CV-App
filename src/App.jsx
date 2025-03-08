@@ -1,6 +1,7 @@
 import { useState } from "react";
 import EditSide from "./components/form-components/EditSide";
 import templateData from "./template";
+import { emptyData } from "./template";
 import "./styles/app.css";
 import ResumeView from "./components/resume-components/ResumeView";
 
@@ -13,7 +14,7 @@ function App() {
     const [sectionData, setSectionData] = useState({
         ...initialSectionData.section,
     });
-    const [sectionBackup, setSectionBackup] = useState({});
+    const [sectionBackup, setSectionBackup] = useState({ ...sectionData });
     const [activeSection, setActiveSection] = useState({
         id: 0,
         name: "Personal Details",
@@ -23,6 +24,21 @@ function App() {
     const handleActiveSection = (event) => {
         const { id, name } = event.target.dataset;
         setActiveSection({ id: parseInt(id), name });
+        setSectionForm({ open: false, id: null });
+        setSectionData({ ...sectionBackup }); // Restore backup
+    };
+
+    const handleResetData = (event) => {
+        const isLoadTemplate = event.target.dataset.load === "true";
+        console.log("goes here", isLoadTemplate);
+        if (isLoadTemplate) {
+            setPersonalData({ ...initialSectionData["Personal Details"] });
+            setSectionData({ ...initialSectionData.section });
+        } else {
+            setPersonalData({ ...emptyData["Personal Details"] });
+            setSectionData({ ...emptyData.section });
+        }
+        setSectionForm({ open: false, id: null });
     };
 
     const handlePersonalDataChange = (event) => {
@@ -136,6 +152,7 @@ function App() {
                         }
                         sectionForm={sectionForm}
                         handleSectionForm={handleSectionForm}
+                        handleResetData={handleResetData}
                     />
                 </aside>
 

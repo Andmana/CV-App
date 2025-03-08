@@ -18,6 +18,7 @@ const EditSide = ({
     handleSectionDataChange,
     sectionForm,
     handleSectionForm,
+    handleResetData,
 }) => {
     const renderActiveSection = () => {
         switch (activeSection.id) {
@@ -63,30 +64,40 @@ const EditSide = ({
     return (
         <>
             <div className="template-loader">
-                <button className="clear-resume">Clear Resume</button>
-                <button className="load-template">Load Template</button>
+                <button
+                    className="clear-resume"
+                    onClick={handleResetData}
+                    data-load="false"
+                >
+                    Clear Resume
+                </button>
+                <button
+                    className="load-template"
+                    onClick={handleResetData}
+                    data-load="true"
+                >
+                    Load Template
+                </button>
             </div>
             <div className="edit-section-container">
-                {!sectionForm.open && (
-                    <div className="edit-section-option">
-                        <ul>
-                            {EditSection.map(
-                                (section) =>
-                                    section.id !== activeSection.id && (
-                                        <li key={section.id}>
-                                            <button
-                                                onClick={handleActiveSection}
-                                                data-id={section.id}
-                                                data-name={section.name}
-                                            >
-                                                {section.name}
-                                            </button>
-                                        </li>
-                                    )
-                            )}
-                        </ul>
-                    </div>
-                )}
+                <div className="edit-section-option">
+                    <ul>
+                        {EditSection.map(
+                            (section) =>
+                                section.id !== activeSection.id && (
+                                    <li key={section.id}>
+                                        <button
+                                            onClick={handleActiveSection}
+                                            data-id={section.id}
+                                            data-name={section.name}
+                                        >
+                                            {section.name}
+                                        </button>
+                                    </li>
+                                )
+                        )}
+                    </ul>
+                </div>
                 <div className="edit-section">{renderActiveSection()}</div>
             </div>
         </>
