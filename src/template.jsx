@@ -36,8 +36,8 @@ const templateData = {
         Educations: [
             {
                 id: crypto.randomUUID(),
-                degree: "your degree",
-                school: "Home school",
+                degree: "Your degree",
+                school: "School",
                 start: "2024",
                 end: "2025",
                 location: "location",
@@ -67,7 +67,8 @@ const templateData = {
                 start: "12/2023",
                 end: "12/2025",
                 location: "city, country",
-                description: "Your description",
+                description:
+                    "- Your description\n- Your description\n- Your description\n- Your description\n- Your description\n",
             },
             {
                 id: crypto.randomUUID(),
@@ -76,11 +77,8 @@ const templateData = {
                 start: "May 1503",
                 end: "March 1520",
                 location: "Caribbean Sea",
-                description: `
-                Defeat ex of Seven Warlords ,
-                Made maps of nonexistent islands just to confuse rival pirates,
-                Successfully avoided capture by wearing an elaborate disguise of seaweed
-                `,
+                description:
+                    "- Defeat ex of Seven Warlords,\n- Made maps of nonexistent islands just to confuse rival pirates,\n- Successfully avoided capture by wearing an elaborate disguise of seaweed",
             },
             {
                 id: crypto.randomUUID(),
@@ -89,11 +87,8 @@ const templateData = {
                 start: "July 706",
                 end: "September 753",
                 location: "Beijing, China",
-                description: [
-                    "Demonstrated excellence in the civil servant exam",
-                    "Successfully poisoned multiple emperors",
-                    "Seduced the wives of 3 emperors in a row",
-                ],
+                description:
+                    "- Demonstrated excellence in the civil servant exam,\n- Successfully poisoned multiple emperors,\n- Seduced the wives of 3 emperors in a row.",
             },
         ],
     },
