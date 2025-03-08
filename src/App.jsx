@@ -32,10 +32,23 @@ function App() {
         });
     };
 
-    // * Need to update
     const handleSectionDataChange = (event) => {
-        console.log("event.target.value", event.target.value);
-        // setSectionData(event);
+        const { name, value } = event.target;
+        const { section, id } = event.target.dataset;
+
+        const updatedSectionData = { ...sectionData };
+
+        if (updatedSectionData[section]) {
+            const updatedDataArr = updatedSectionData[section].map((item) => {
+                if (item.id == id) {
+                    return { ...item, [name]: value };
+                }
+                return item;
+            });
+
+            updatedSectionData[section] = updatedDataArr;
+            setSectionData(updatedSectionData);
+        }
     };
 
     const handleSectionForm = (event) => {
@@ -64,17 +77,6 @@ function App() {
 
         setSectionForm({ open, id });
     };
-
-    console.log("sectionForm.id", sectionForm.id);
-
-    // if (activeSection.id !== 0) {
-    //     console.log("real : ", sectionData[activeSection.name].length);
-    //     if (Object.hasOwn(sectionBackup, activeSection.name))
-    //         console.log("BU : ", sectionBackup[activeSection.name].length);
-
-    //     // console.log("real : ", sectionData);
-    //     // console.log("BU : ", sectionBackup);
-    // }
 
     const createEmptyFormValue = (section) => {
         if (section === "Skills")

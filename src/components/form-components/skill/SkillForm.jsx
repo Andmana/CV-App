@@ -40,7 +40,14 @@ const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
                         </button>
                     </div>
                     <div>
-                        <button className="bg-primary">Save</button>
+                        <button
+                            onClick={handleSectionForm}
+                            data-open="false"
+                            data-id={data.id}
+                            className="bg-primary"
+                        >
+                            Save
+                        </button>
                     </div>
                 </div>
             </div>
