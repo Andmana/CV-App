@@ -6,7 +6,7 @@ const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
         <>
             <div className="section-form">
                 <InputGroup
-                    label="name"
+                    label="Skill"
                     propName="name"
                     propValue={data.name}
                     onChangeFunction={handleSectionDataChange}
@@ -16,7 +16,7 @@ const SKillForm = ({ data, handleSectionDataChange, handleSectionForm }) => {
                 />
 
                 <InputGroup
-                    label="descriotion"
+                    label="Description"
                     propName="description"
                     propValue={data.description}
                     onChangeFunction={handleSectionDataChange}
