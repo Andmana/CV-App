@@ -5,7 +5,7 @@ import "./styles/app.css";
 
 function App() {
     const initialSectionData = templateData;
-    const [presonalData, setPersonalData] = useState({
+    const [personalData, setPersonalData] = useState({
         ...initialSectionData["Personal Details"],
     });
     const [sectionData, setSectionData] = useState({
@@ -25,7 +25,7 @@ function App() {
     const handlePersonalDataChange = (event) => {
         const { name, value } = event.target;
         setPersonalData({
-            ...presonalData,
+            ...personalData,
             [name]: value,
         });
     };
@@ -54,7 +54,7 @@ function App() {
                             handleActiveSection={handleActiveSection}
                             sectionData={
                                 activeSection.id === 0
-                                    ? presonalData
+                                    ? personalData
                                     : sectionData
                             }
                             handleSectionDataChange={

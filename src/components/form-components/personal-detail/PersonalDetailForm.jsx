@@ -1,6 +1,6 @@
 import InputGroup from "../InputGroup";
 
-const PersonalDetailForm = (personalData, handlePersonalDataChange) => {
+const PersonalDetailForm = ({ personalData, handlePersonalDataChange }) => {
     return (
         <>
             <InputGroup
