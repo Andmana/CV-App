@@ -21,6 +21,8 @@
 
 .resume-section-header {
     margin-bottom: 0.5rem;
-    background-color: var(--bg-light);
-    text-align: center;
+    border-bottom: 3px solid black;
+    margin-bottom: 1rem;
+    /* background-color: var(--bg-light); */
+    /* text-align: center; */
 }
