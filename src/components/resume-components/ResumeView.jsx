@@ -2,7 +2,7 @@ import ResumeTop from "./ResumeTop";
 import "../../styles/resume.css";
 import ResumeSkill from "./ResumeSkill";
 import ResumeEducation from "./ResumeEducation";
-import ResumeExperience from "./REsumeExperience";
+import ResumeExperience from "./ResumeExperience";
 import { useState } from "react";
 
 const ResumeView = ({ personalData, sectionData }) => {
