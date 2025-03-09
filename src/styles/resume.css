@@ -2,6 +2,32 @@
     padding: 1rem;
     display: flex;
     justify-content: center;
+    position: relative;
+}
+
+.resume-wrapper {
+    padding: 10px;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    overflow-x: visible;
+}
+
+.resume-wrapper.extend {
+    height: auto;
+    overflow-y: unset;
+}
+
+.extend-button {
+    position: absolute;
+    top: calc(1rem + 15px);
+    left: 0;
+    z-index: 100;
+}
+
+.extend-button button {
+    background-color: var(--bg-white);
+    padding: 10px;
+    border: unset;
 }
 
 .resume-border {

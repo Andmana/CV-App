@@ -141,6 +141,16 @@ li {
     background-size: cover;
 }
 
+.icon-extend {
+    background-image: url("/extend-icon.svg");
+    background-size: cover;
+}
+
+.icon-shrink {
+    background-image: url("/shrink-icon.svg");
+    background-size: cover;
+}
+
 .flex-1 {
     flex: 1;
 }
